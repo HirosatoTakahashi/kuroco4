@@ -90,6 +90,8 @@ jobs:
         run: npm ci
       - name: Build
         run: npm run build
+      - name: Verify dist directory
+        run: ls dist
       - name: Create out directory
         run: mkdir out
       - name: Copy files to out directory
