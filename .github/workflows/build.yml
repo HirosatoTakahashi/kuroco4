@@ -101,7 +101,7 @@ jobs:
         with:
           name: ${{ github.sha }}-${{ github.run_id }}
           path: out.zip
-          retention-days: 7
+          retention-days: 7     
       - name: Webhook
         uses: diverta/workflow-webhook@v2
         env:
