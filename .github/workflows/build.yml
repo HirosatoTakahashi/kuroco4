@@ -90,6 +90,10 @@ jobs:
         run: npm ci
       - name: Build
         run: npm run build
+      - name: Create out directory
+        run: mkdir out
+      - name: Copy files to out directory
+        run: cp -r dist/* out/
       - name: Zip artifact for upload
         run: cd out && zip ../out.zip . -r
       - name: Archive Production Artifact
